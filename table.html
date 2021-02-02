@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sheet</title>
+    <link rel="stylesheet" type="text/css" href="css/sheet.css">
+</head>
+<body>
+    <div>
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prénon</th>
+                    <th>Ville</th>
+                    <th>Télé</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('#example').DataTable( {
+        "language": {
+            //url: 'https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Arabic.json',
+            "lengthMenu": "Afficher _MENU_ lignes",
+            "search": "Chercher:",
+            "zeroRecords": "Vide!!",
+            "info": "_PAGE_ sur _PAGES_ .",
+            "infoEmpty": "Aucunes données trouvées... Si vous pensez que c'est une erreur, veuillez nous contacter",
+            "infoFiltered": "(filtered from _MAX_ total records)",
+            "paginate": {
+            "first":      "Premier(e)",
+            "last":       "Dérnier(e)",
+            "next":       "Suivant",
+            "previous":   "Précédent"
+    },
+
+        }
+    } );
+} );
+    </script>
+    
+</body>
+</html>
